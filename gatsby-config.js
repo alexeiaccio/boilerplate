@@ -5,7 +5,7 @@ const path = require('path')
 
 // SEO configuration
 const siteTitle = 'Boiler'
-const siteUrl = 'https://freehome.art'
+const siteUrl = ''
 const siteDescription = 'Boiler'
 const siteKeywords = 'Gatsby, web'
 const siteThemeColor = '#009688'
@@ -45,7 +45,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: 'freehome',
+        repositoryName: process.env.PRICMIC_API,
         accessToken: process.env.PRICMIC_TOKEN,
       },
     },

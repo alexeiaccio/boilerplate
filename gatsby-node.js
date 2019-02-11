@@ -18,32 +18,8 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   const pages = await graphql(`
-    {
-      volumes: allPrismicVolume {
-        edges {
-          node {
-            uid
-          }
-        }
-      }
-      chapters: allPrismicChapter {
-        edges {
-          node {
-            uid
-          }
-        }
-      }
-      texts: allPrismicText {
-        edges {
-          node {
-            uid
-          }
-        }
-      }
-    }
+    {}
   `)
-
-  pageMaker('texts', pages.data.texts.edges)
 }
 
 exports.onCreateBabelConfig = ({ actions }) => {
